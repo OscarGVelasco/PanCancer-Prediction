@@ -23,6 +23,7 @@ import json
 # Import app configuration variables
 from config import config
 
+
 """
 # Model hyperparameters
 N_CPUS=64
