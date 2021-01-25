@@ -44,6 +44,7 @@ print("Done.")
 
 ####### Loading the Data
 # Raw Reads RNA-Seq
+
 print("Loading RNA-Seq data file: ",config.RNASEQDATA_FILE)
 dfsamples = pandas.read_feather(config.PATHDATA+config.RNASEQDATA_FILE).set_index('index')
 if config.RNASEQDATA_IS_NORMALIZED==False:
@@ -51,17 +52,18 @@ if config.RNASEQDATA_IS_NORMALIZED==False:
     dfsamples = convfunc.convert_rawreads_to_cpm(dfsamples)
 else:
     print("Data is already normalized.")
+
 dfsamples = dfsamples.loc[tf_and_pancancer_genes_index,:]
 
 """
 print("Loading GDC data...")
-dfsamples = pandas.read_feather(PATHDATA+RNASEQDATA_FILE).set_index('gene')
+dfsamples = pandas.read_feather(config.PATHDATA+config.RNASEQDATA_FILE).set_index('gene')
 dfsamples = convfunc.convert_rawreads_to_cpm(dfsamples)
 dfsamples.index = [item.split(".")[0] for item in dfsamples.index]
 dfsamples = dfsamples.loc[tf_and_pancancer_genes_index,:]
 
 print("Loading GTex data...")
-gtex = pandas.pandas.read_feather(PATHDATA+GTEX_RNASEQDATA_FILE)
+gtex = pandas.pandas.read_feather(config.PATHDATA+config.GTEX_RNASEQDATA_FILE)
 gtex = gtex.set_index("index")
 gtex = convfunc.convert_rawreads_to_cpm(gtex)
 gtex = gtex.loc[tf_and_pancancer_genes_index,:]

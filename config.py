@@ -24,9 +24,9 @@ class Config(object):
 
         """ Data """
         # MAIN GDC and GTEx data
-        #self.PHENODATA_FILE = "GDC.GTex.phenodatas.merged.feather"
-        #self.GTEX_RNASEQDATA_FILE = "gtex.raw.reads.formated.feather"
-        #self.RNASEQDATA_FILE = "dfsamples.GDC.15211.samples.clean1.57920.genes.deleted.less.5.reads.feather"
+        self.PHENODATA_FILE = "GDC.GTex.phenodatas.merged.feather"
+        self.GTEX_RNASEQDATA_FILE = "gtex.raw.reads.formated.feather"
+        self.RNASEQDATA_FILE = "dfsamples.GDC.15211.samples.clean1.57920.genes.deleted.less.5.reads.feather"
         # - LUNG CANCER SAMPLES - metastasic and no metastasic
         #self.PHENODATA_FILE = "lung.cancer.GSE162945.pheno.feather"
         #self.RNASEQDATA_FILE = "lung.cancer.GSE162945.raw.feather"
@@ -37,9 +37,9 @@ class Config(object):
         #self.PHENODATA_FILE = "colon.african.american.pheno.feather"
         #self.RNASEQDATA_FILE = "colon.african.american.raw.feather"
         # - SINGLE-CELL GASGTRIC CANCER SAMPLES - metastasic
-        self.PHENODATA_FILE = "singlecell.gastric.metastasis.pheno.feather"
-        #RNASEQDATA_FILE = "singlecell.gastric.metastasis.raw.reads.feather"
-        self.RNASEQDATA_FILE = "singlecell.gastric.metastasis.GMPR.normalized.reads.feather"
+        #self.PHENODATA_FILE = "singlecell.gastric.metastasis.pheno.feather"
+        #self.RNASEQDATA_FILE = "singlecell.gastric.metastasis.raw.reads.feather"
+        #self.RNASEQDATA_FILE = "singlecell.gastric.metastasis.GMPR.normalized.reads.feather"
         self.RNASEQDATA_IS_NORMALIZED = True
 
         """ File names """
